@@ -1,4 +1,3 @@
-
 <template>
     <div class="container-fluid">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -6,18 +5,18 @@
             <div class="col-lg-12">
                 <h2 class="text-center my-4"> Siswa</h2>
                 <div class="my-3">
-                    <form @submit.prevent="getTransaksi">
+                    <!-- <form @submit.prevent="getTransaksi">
                         <input v-model="keyword" type="search" class="form-control rounded-5" placeholder="Cari">
-                    </form>
-                    <div class="my-3 text-muted"> Menampilkan {{ visitors.length }} dari {{ jumlah }} </div>
+                    </form> -->
+                    <!-- <div class="my-3 text-muted"> Menampilkan {{ visitors.length }} dari {{ jumlah }} </div> -->
                     <table class="table">
                         <thead>
                             <tr>
-                            <td>NO</td>
-                            <td>NAMA</td>
-                            <td>TANGGAL</td>
-                            <td>NOMINAL</td>
-                        </tr>
+                                <td>NO</td>
+                                <td>NAMA</td>
+                                <td>TANGGAL</td>
+                                <td>NOMINAL</td>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr v-for="(visitor, i) in visitors" :key="i">
@@ -53,10 +52,10 @@ const getTransaksi = async () => {
             jumlah,
             tanggal
         `)
-        .ilike('anggota.nama', `%${keyword.value}%`)
-        
+        // .ilike('anggota.nama', `%${keyword.value}%`)
+
         .order('id', { ascending: false })
-        if(data) visitors.value = data
+    if (data) visitors.value = data
 }
 
 // Get total count of transactions

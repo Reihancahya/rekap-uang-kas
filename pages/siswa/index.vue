@@ -69,22 +69,18 @@
   }
   
   // Fetch members from 'anggota' table
-  // const getAnggota = async () => {
-  //   const { data, error } = await supabase.from("laporan").select("*")
-  //   if (error) {
-  //     console.error("Error fetching anggota:", error)
-  //   } else {
-  //     members.value = data || []
-  //   }
-  // }
+  const getAnggota = async () => {
+    const { data, error } = await supabase.from("laporan").select("*")
+    if (error) {
+      console.error("Error fetching anggota:", error)
+    } else {
+      members.value = data || []
+    }
+  }
   
-  // onMounted(() => {
-  //   getAnggota()
+  onMounted(() => {
+    getAnggota()
   
-  // })
+  })
   </script>
-  
-  <style scoped>
-  
-  </style>
   

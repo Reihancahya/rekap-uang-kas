@@ -31,16 +31,10 @@
             />
           </div>
 
-          <button
-            type="submit"
-            class="btn btn-lg rounded-5 px-5 bg-primary text-white"
-          >
-            KIRIM
-          </button>
+          <button type="submit" class="btn btn-lg rounded-5 px-5 bg-primary text-white">KIRIM</button>
           <NuxtLink to="/">
-
-<button type="button" class="btn btn-danger btn-lg">Batal</button>
-</NuxtLink>
+            <button type="button" class="btn btn-lg rounded-5 px-5 bg-danger text-white">BATAL</button>
+          </NuxtLink>
         </form>
         <br />
       </div>
